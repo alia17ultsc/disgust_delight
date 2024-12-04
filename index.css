@@ -1,0 +1,54 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: rgb(112, 158, 120);
+  color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caption{
+  position: fixed;
+  top: 5px;
+  left: 0;
+  font-size: 20vw;
+  width: 100%;
+  text-align: center;
+}
+
+.phrase{
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  width: 74vw;
+  font-size: 6vw;
+  text-align: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin: 8vw;
+  text-shadow: 0 0 10px rgb(208, 223, 77);
+}
+
+.clickImg{
+  width: 60vw;
+}
+
+@media only screen and(min-width: 500px){
+  body{
+    background-color: rgb(214, 141, 181);
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  body{
+    background-color: rgb(112, 158, 120);
+    color: black;
+  }
+}
