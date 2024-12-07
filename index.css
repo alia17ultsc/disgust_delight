@@ -3,7 +3,13 @@
   margin: 0;
 }
 
+@font-face{
+  font-family:mainfont;
+  src:url(/fonts/peacechild-beta.woff2);
+}
+
 body{
+  font-family: mainfont, sans-serif;
   background-color: rgb(112, 158, 120);
   color: black;
   width: 100vw;
@@ -51,4 +57,73 @@ body{
     background-color: rgb(112, 158, 120);
     color: black;
   }
+}
+
+
+@keyframes neonObjectAnimation{
+  0%{
+    transform: rotate(0deg) translateY(0px);
+    width: 30px;
+    height: 30px;
+  }
+  10%{
+    width: 20px;
+    height: 40px;
+  }
+  20%{
+    width: 15px;
+    height: 50px;
+  }
+  30%{
+    width: 20px;
+    height: 30px;
+  }
+  40%{
+    width: 15px;
+    height: 40px;
+    opacity: 0.3;
+  }
+  50%{
+    width: 20px;
+    height: 50px;
+    background: linear-gradient(to right, rgb(55, 110, 10), rgb(76, 155, 12), rgb(148, 23, 23), rgb(76, 155, 12), rgb(55, 110, 10));
+    opacity: 1;
+  }
+  60%{
+    width: 15px;
+    height: 30px;
+    opacity: 0.8;
+  }
+  70%{
+    width: 20px;
+    height: 50px;
+    opacity: 0.3;
+  }
+  80%{
+    width: 15px;
+    height: 40px;
+  }
+  90%{
+    width: 20px;
+    height: 40px;
+  }
+  100%{
+    transform: rotate(720deg) translateY(220px);
+    width: 30px;
+    height: 30px;
+  }
+}
+.neonObject{
+  display: none;
+  position: absolute;
+  top: 450px;
+  left: 200px;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(to right, rgb(55, 110, 10), rgb(76, 155, 12), rgb(115, 255, 0), rgb(76, 155, 12), rgb(55, 110, 10));
+  z-index: 5;
+  border-radius: 50px;
+  transform-origin: center;
+  animation: neonObjectAnimation 7s infinite alternate-reverse;
+  transition: 1s;
 }
