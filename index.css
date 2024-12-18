@@ -8,58 +8,6 @@
   src:url(/fonts/peacechild-beta.woff2);
 }
 
-body{
-  font-family: mainfont, sans-serif;
-  background-color: rgb(112, 158, 120);
-  color: black;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.caption{
-  position: fixed;
-  top: 5px;
-  left: 0;
-  font-size: 20vw;
-  width: 100%;
-  text-align: center;
-}
-
-.phrase{
-  position: fixed;
-  bottom: 5px;
-  left: 0;
-  width: 74vw;
-  font-size: 6vw;
-  text-align: center;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  margin: 8vw;
-  text-shadow: 0 0 10px rgb(208, 223, 77);
-}
-
-.clickImg{
-  width: 60vw;
-}
-
-@media only screen and(min-width: 500px){
-  body{
-    background-color: rgb(214, 141, 181);
-    color: black;
-  }
-}
-
-@media only screen and (max-width: 500px){
-  body{
-    background-color: rgb(112, 158, 120);
-    color: black;
-  }
-}
-
-
 @keyframes neonObjectAnimation{
   0%{
     transform: rotate(0deg) translateY(0px);
@@ -113,6 +61,84 @@ body{
     height: 30px;
   }
 }
+
+
+  body{
+    font-family: mainfont, sans-serif;
+    color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cap_tion{
+    display: block;
+  }
+.caption{
+  display: none;
+}
+.phrase{
+  display: none;
+}
+.neonObject{
+  display: none;
+}
+.clickImg{
+  display: none;
+}
+
+body{
+  background-color: rgb(214, 141, 181);
+}
+
+
+@media only screen and (max-width: 500px){
+  .cap_tion{
+    display: none;
+  }
+  body{
+    background-color: rgb(112, 158, 120);
+    color: black;
+  }
+  .allpetals{
+    display: none;
+  }
+  .caption{
+    position: fixed;
+    top: 5px;
+    left: 0;
+    font-size: 20vw;
+    width: 100%;
+    text-align: center;
+    display: block;
+    text-shadow: 0 0 35px rgb(69, 94, 10);
+  }
+  .phrase{
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    width: 74vw;
+    font-size: 6vw;
+    text-align: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin: 8vw;
+    display: block;
+    text-shadow: 0 0 10px rgb(208, 223, 77);
+
+  }
+  
+  .clickImg{
+    width: 60vw;
+    display: block;
+  }
+  
+  .flowersimg{
+    display: none;
+  }
+
 .neonObject{
   display: none;
   position: absolute;
@@ -126,4 +152,246 @@ body{
   transform-origin: center;
   animation: neonObjectAnimation 7s infinite alternate-reverse;
   transition: 1s;
+}
+
+.phrase_{
+  display: none;
+}
+
+}
+
+
+
+
+
+@media only screen and (min-width: 500px){
+  body{
+    background-color: rgb(214, 141, 181);
+    color: rgb(211, 211, 211);
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .allpetals{
+    width: 70vw;
+    height: 80vh;
+    position: absolute;
+    bottom: 10vh;
+    left: 15vw;
+    background-color: blue;
+    z-index: -80;
+  }
+
+  .petal{
+    opacity: 0.5;
+  }
+  .p1{
+    position: relative;
+    width: 4vw;
+    transform: rotateX(180deg);
+  }
+
+  .p2{
+    position: relative;
+    left: 2vw;
+    top: 30vh;
+    width: 4vw;
+    transform: rotateZ(90deg);
+  }
+
+  .p3{
+    position: relative;
+    left: 50vw;
+    top: 50vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  .p4{
+    position: relative;
+    left: 30vw;
+    top: -2vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  
+  .p5{
+    position: relative;
+    left: 8vw;
+    top: 5vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  
+  .p6{
+    position: relative;
+    left: 15vw;
+    top: 60vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  
+  .p7{
+    position: relative;
+    left: 270vw;
+    top: 25vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  
+  .p8{
+    position: relative;
+    left: 60vw;
+    top: 20vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  .p9{
+    position: relative;
+    left: 17vw;
+    top: 30vh;
+    width: 4vw;
+    transform: rotateZ(90deg);
+  }
+
+  .p10{
+    position: relative;
+    left: 50vw;
+    top: 30vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  .p11{
+    position: relative;
+    left: 4vw;
+    top: 20vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  
+  .p12{
+    position: relative;
+    left: 40vw;
+    top: 20vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  
+  .p13{
+    position: relative;
+    left: 63vw;
+    top: 40vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  
+  .p14{
+    position: relative;
+    left: 5vw;
+    top: 30vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  
+  .p15{
+    position: relative;
+    left: 59vw;
+    top: -10vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+  .p16{
+    position: relative;
+    left: 80vw;
+    top: 20vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  
+  .p17{
+    position: relative;
+    left: 80vw;
+    top: 20vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  
+  .p18{
+    position: relative;
+    left: 80vw;
+    top: 20vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  
+  .p19{
+    position: relative;
+    left: 80vw;
+    top: 20vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+  .p20{
+    position: relative;
+    left: 10vw;
+    top: 2vh;
+    width: 4vw;
+    transform: rotateZ(270deg);
+  }
+
+
+  .cap_tion{
+    font-size: 5vw;
+      display:block;
+      position: fixed;
+      z-index: 10;
+    }
+  .caption{
+    display: none;
+  }
+  .phrase{
+    display: none;
+  }
+  .neonObject{
+    display: none;
+  }
+  .clickImg{
+    display: none;
+  }
+  .flowersimg{
+    display: block;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0vh;
+  }
+  .phrase_{
+    font-size: 3vw;
+    position: absolute;
+    bottom: 5px;
+    margin-left: 8vw;
+    margin-right: 5vw;
+    z-index: 5;
+    text-shadow: 0 0 35px rgb(68, 8, 165);
+  }
+  .q{
+    color: rgb(68, 8, 165);
+    bottom: 7px;
+    margin-left: 7.8vw;
+    z-index: 4;
+  }
 }
