@@ -66,12 +66,67 @@ function buildingFlowerPart2(){
   positionY+=0.59;
   petal.style.left=`${positionX}vw`;
   petal.style.top=`${positionY}vh`;
+
+  var petal2=document.getElementsByClassName("p2")[0];
+  positionX2+=0.6;
+  positionY2+=0.2;
+  petal2.style.left=`${positionX2}vw`;
+  petal2.style.top=`${positionY2}vh`;
+
+  var petal3=document.getElementsByClassName("p3")[0];
+  positionX3+=0.7;
+  positionY3+=0.15;
+  petal3.style.left=`${positionX3}vw`;
+  petal3.style.top=`${positionY3}vh`;
+
   if (positionX<18)
     {
-      
+      showFlower();
     }
     else{
- setTimeout(buildingFlowerPart2, 25);
+ setTimeout(buildingFlowerPart3, 25);
 
     }
+}
+
+function buildingFlowerPart3(){
+
+
+  
+  setTimeout(showFlower, 25);
+}
+
+var allpetalSize = 4.0;
+
+function reducePetals(){
+  var petalAll = document.getElementsByClassName("petal");
+  for (var i=0; i<petalAll.length; i++){
+    petalAll[i].style.width=`${allpetalSize}vw`;
+  }    
+  allpetalSize-=0.1;
+  if (allpetalSize>0.5){
+  setTimeout(reducePetals, 15);
+  }
+}
+
+var flowerOpacity=0;
+var flowerWidth=0;
+
+function createRealFlower(){
+  var realFlower = document.getElementById("flwr");
+  realFlower.style.opacity=`${flowerOpacity}`;
+  realFlower.style.width=`${flowerWidth}vw`;
+  flowerOpacity+=0.05;
+  flowerWidth+=0.5;
+  if(flowerWidth<43){
+     setTimeout(createRealFlower, 20);
+  }
+ 
+ 
+}
+
+function showFlower(){
+  reducePetals();
+  createRealFlower();
+ 
 }

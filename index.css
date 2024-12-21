@@ -394,4 +394,16 @@ body{
     margin-left: 7.8vw;
     z-index: 4;
   }
+
+  .appearingflower{
+    opacity: 0.5;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    top: 30vh;
+    z-index: 9;
+  }
+  .appearingflower img{
+    width: 0%;
+  }
 }
